@@ -1,0 +1,142 @@
+/* =======================================================
+   * STYLES.CSS - Component Extensions for ION Print & Promo
+   * Extends global.css with page-specific components
+   * ======================================================= */
+
+@import "tailwindcss";
+
+@layer components {
+  /* =======================================================
+   * HERO SECTION COMPONENTS
+   * ======================================================= */
+  
+  /* Hero section specific styles */
+  .hero-section {
+    @apply relative min-h-svh flex items-center justify-center px-6 py-10 sm:px-10 sm:py-20;
+  }
+  
+  /* Hero overlay for better text readability */
+  .hero-overlay {
+    @apply absolute inset-0 bg-linear-to-b from-slate-900/95 via-slate-900/85 to-slate-900/90;
+  }
+
+  /* Hero content wrapper */
+  .hero-content {
+    @apply relative mx-auto w-full max-w-4xl text-center text-white;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  }
+
+  /* =======================================================
+   * TYPOGRAPHY - Traditional heading overrides for hero
+   * ======================================================= */
+  
+  /* Hero H1 with gradient */
+  .hero-section h1 {
+    @apply text-slate-50 text-5xl/tight sm:text-7xl/tight text-balance tracking-tight mt-4;
+    @apply drop-shadow-sm;
+    font-family: var(--font-family-base, "Poppins", sans-serif);
+    font-weight: 800;
+  }
+
+  /* Hero paragraph styles */
+  .hero-section p {
+    @apply text-white/90 text-base sm:text-lg text-pretty leading-relaxed mx-auto mt-6 max-w-2xl;
+    font-family: var(--font-family-base, "Poppins", sans-serif);
+    font-weight: 400;
+  }
+
+  /* Hero paragraph emphasis */
+  .hero-section p span {
+    @apply font-medium text-white;
+  }
+
+  /* =======================================================
+   * BUTTON VARIANTS - Following global.css patterns
+   * ======================================================= */
+  
+  /* Primary button - inherits from global .btn with white variant */
+  .btn-primary {
+    @apply rounded py-4 px-7 text-base transform transition-all duration-300;
+    @apply bg-white text-slate-900;
+    @apply hover:-translate-y-2 hover:drop-shadow-lg hover:bg-white/95;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70;
+    @apply focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900;
+    font-family: var(--font-family-base, "Poppins", sans-serif);
+    font-weight: 500;
+  }
+
+  /* Ghost button - transparent with white border */
+  .btn-ghost {
+    @apply rounded py-4 px-7 text-base transform transition-all duration-300;
+    @apply text-white bg-transparent border-2 border-white/30;
+    @apply hover:-translate-y-2 hover:drop-shadow-lg hover:bg-white/10 hover:border-white/50;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70;
+    @apply focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900;
+    font-family: var(--font-family-base, "Poppins", sans-serif);
+    font-weight: 500;
+  }
+
+  /* Button container */
+  .button-group {
+    @apply mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row;
+  }
+
+  /* =======================================================
+   * LOGO COMPONENT
+   * ======================================================= */
+  
+  .logo {
+    @apply mb-6 inline-block;
+    animation: fadeInDown 0.8s ease-out;
+  }
+
+  .logo img {
+    @apply h-24 sm:h-32 w-auto mx-auto;
+  }
+
+  /* =======================================================
+   * FOOTER COMPONENT
+   * ======================================================= */
+  
+  .hero-footer {
+    @apply pt-8 border-t border-white/30 mt-12;
+  }
+
+  .hero-footer .copyright {
+    @apply flex flex-col items-center gap-2 text-center;
+  }
+
+  .hero-footer .copyright img {
+    @apply w-5 h-5;
+  }
+
+  .hero-footer .copyright span {
+    @apply text-white/90 text-sm;
+  }
+
+  /* =======================================================
+   * ANIMATIONS
+   * ======================================================= */
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
