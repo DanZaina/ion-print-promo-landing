@@ -17,7 +17,7 @@
   
   /* Hero overlay for better text readability */
   .hero-overlay {
-    @apply absolute inset-0 bg-linear-to-b from-slate-900/95 via-slate-900/85 to-slate-900/90;
+    @apply absolute inset-0 bg-linear-to-b bg-slate-950/95;
   }
 
   /* Hero content wrapper */
