@@ -2,7 +2,7 @@
    * STYLES.CSS - Component Extensions for ION Print & Promo
    * Extends global.css with page-specific components
    * ======================================================= */
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @layer components {
